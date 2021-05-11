@@ -46,6 +46,7 @@ func (r *router) addRoute(method string, pattern string, handler handlerFunc) {
 	r.handlers[key] = handler
 }
 
+//相比静态路由，增加了一些模糊匹配的规则
 func (r *router) getRoute(method string, path string) (*node, map[string]string) {
 	searchParts := parsePattern(path)
 	params := make(map[string]string)

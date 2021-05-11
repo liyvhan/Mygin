@@ -16,7 +16,7 @@ type Context struct {
 	//request info
 	Path   string
 	Method string
-	Params map[string]string
+	Params map[string]string //用来模糊查找，匹配所有后缀相同的或类型相同的
 	//response info
 	StatusCode int
 }
